@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW15_Animations</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        body {
+            background-image: url(img/background.jpg);
+            background-size: cover;
+            background-position: top center;
+            height: 100vh;
+        }
+
+        .sun {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            width: 200px;
+            animation-name: sun;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        @keyframes sun {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .earth {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            width: 100px;
+            animation-name: earth;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        @keyframes earth {
+            0% {
+                transform: rotate(0deg) translateX(300px);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(300px);
+            }
+        }
+
+        .superhero {
+            width: 120px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            animation-name: superhero;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        @keyframes superhero {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+
+            25% {
+                transform: translateX(85vw) translateY(0);
+            }
+
+            50% {
+                transform: translateX(85vw) translateY(75vh);
+            }
+
+            75% {
+                transform: translateX(0) translateY(75vh);
+            }
+
+            100% {
+                transform: translateX(0) translateY(0);
+            }
+            
+        }
+
+        div {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            color: white;
+        }
+
+        div a {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        div a:last-of-type {
+            margin-bottom: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img class="sun" src="img/sun.svg" alt="sun">
+    <img class="earth" src="img/earth.svg" alt="earth">
+    <img class="superhero" src="img/superhero.svg" alt="superhero">
+
+    <div> <!-- Вставила ссылки, потому что использовала вектор с бесплатной лицензией. ) -->
+        <a href='https://ru.freepik.com/vectors/cartoon'>Cartoon вектор создан(а) brgfx - ru.freepik.com</a>
+        <a href='https://ru.freepik.com/vectors/character'>Character вектор создан(а) pch.vector - ru.freepik.com</a>
+    </div>
+</body>
+
+</html>
